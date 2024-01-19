@@ -21,15 +21,22 @@ where you can explore and listen to their songs. Additionally, there's a chat pa
    - Member details.
    - Awards owned by BTS.
    - List of BTS albums.
+   ![Alt text](image.png)
+   ![Alt text](image-1.png)
+   ![Alt text](image-2.png)
 
 2. **Music Page:**
    - List of BTS songs.
    - Song lyrics display.
    - Music playback feature.
+   ![Alt text](image-3.png)
+   ![Alt text](image-4.png)
 
 3. **Chat Page:**
    - Chat room for ARMY to share their views.
    - Real-time communication.
+   ![Alt text](image-6.png)
+   ![Alt text](image-5.png)
 
 ## Technologies Used
 
