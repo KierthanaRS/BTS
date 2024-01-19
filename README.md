@@ -44,7 +44,6 @@ where you can explore and listen to their songs. Additionally, there's a chat pa
 - React.js
 - Express.js
 - MySQL
-- Other technologies you've used
 
 ## Getting Started
 
