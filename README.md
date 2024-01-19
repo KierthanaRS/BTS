@@ -31,6 +31,7 @@ where you can explore and listen to their songs. Additionally, there's a chat pa
    - Music playback feature.
    ![Alt text](image-3.png)
    ![Alt text](image-4.png)
+   
 
 3. **Chat Page:**
    - Chat room for ARMY to share their views.
