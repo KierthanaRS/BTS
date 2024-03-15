@@ -34,7 +34,7 @@ app.get("/songs", (req, res) => {
 });
 
 app.get("/getSongById/:id", (req, res) => {
-  const query = "SELECT name,Lyrics,musicUrl,pic FROM songs WHERE id = ?";
+  const query = "SELECT id,name,Lyrics,musicUrl,pic FROM songs WHERE id = ?";
   db.query(query, [req.params.id], (err, result) => {
     if (err) {
       console.error("Error executing query: " + err.stack);
