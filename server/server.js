@@ -111,6 +111,20 @@ app.get("/memberinfo/:id", (req, res) => {
     }
   });
 });
+
+app.get("/albumpic/:id", (req, res) => {
+  const query = "SELECT cp_1,cp_2,cp_3,cp_4,cp_5,name,year FROM album WHERE id = ?";
+  db.query(query, [req.params.id], (err, result) => {
+    if (err) {
+      console.error("Error executing query: " + err.stack);
+      res.status(500).send("Internal Server Error");
+    } else {
+      res.send(result);
+    }
+  });
+});
+
+
 app.get("/runbts", (req, res) => {
   const query = "SELECT * FROM runbts";
   db.query(query, (err, result) => {
