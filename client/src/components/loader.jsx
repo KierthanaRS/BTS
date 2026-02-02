@@ -1,0 +1,52 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import bodymovin from 'bodymovin';
+
+// import ScrubBodymovinTimeline from 'scrub-bodymovin-timeline';
+
+
+const Loader = () => {
+  const animationWindowRef = useRef(null);
+  const navigate = useNavigate();
+  useEffect(() => {
+    const animData = {    
+            wrapper: animationWindowRef.current,
+            animType: 'svg',
+            loop: true,
+            prerender: true,
+            autoplay: true,
+            path: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/35984/play_fill_loader.json',
+      rendererSettings: {
+        //context: canvasContext, // the canvas context
+        //scaleMode: 'noScale',
+        //clearCanvas: false,
+        //progressiveLoad: false, // Boolean, only svg renderer, loads dom elements when needed. Might speed up initialization for large number of elements.
+        //hideOnTransparent: true //Boolean, only svg renderer, hides elements when opacity reaches 0 (defaults to true)
+      } 
+    };  
+       
+    
+     const  anim = bodymovin.loadAnimation(animData);
+     anim.addEventListener('DOMLoaded', onDOMLoaded);
+     anim.setSpeed(1);
+    
+    function onDOMLoaded(e){
+     
+     anim.addEventListener('complete', function(){});
+     setTimeout(() => {
+      navigate("/home");
+     }, 7000);
+    }
+    
+    // ScrubBodymovinTimeline(anim);
+  });
+    return (
+      <div class="Loader">
+        <div  ref={animationWindowRef} className="animationWindow" id="animationWindow">
+</div>
+</div>
+    );
+    };
+
+export default Loader;
